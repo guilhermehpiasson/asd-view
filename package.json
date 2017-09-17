@@ -1,0 +1,19 @@
+{
+  "name": "Home",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node asdView.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "consign": "^0.1.6",
+    "ejs": "*",
+    "express": "^3.2.6",
+    "express-validator": "^4.1.1",
+    "json-stringify": "^1.0.0",
+    "restify": "^6.0.0",
+    "restify-clients": "^1.5.1",
+    "sitemap": "^1.13.0"
+  }
+}
