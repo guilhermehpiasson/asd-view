@@ -9,6 +9,6 @@ var app = require('./config/custom-express')();
 // var rotasHome = require('./app/routes/home')(app);
 // var rotasErro = require('./app/routes/erros')(app);
 
-app.listen(3004, function(){
-  console.log('Servidor rodando na porta 3004.');
-});
+var port = process.env.port || 3000;
+
+app.listen(port);
