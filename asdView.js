@@ -6,9 +6,9 @@
  */
 
 var app = require('./config/custom-express')();
-// var rotasHome = require('./app/routes/home')(app);
-// var rotasErro = require('./app/routes/erros')(app);
+var logger = require('./servicos/logger.js');
 
 app.listen(app.get('port'), function(){
 	console.log('Express server listening on port ' + app.get('port'));
+	logger.info('Express server listening on port ' + app.get('port'));
 });
