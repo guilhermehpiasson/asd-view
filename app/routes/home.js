@@ -45,11 +45,8 @@ module.exports = function(app){
 												notificacoes.push(notificacao);
 											}
 
-											console.log(notificacoes);
-
 											objetoView.NOTIFICACOES = notificacoes;
-											// var a = JSON.stringify(objetoView);
-											//console.log(objetoView);
+
 											res.render("../app/views/home/descarte", {listas:objetoView});
 
 								});
