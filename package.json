@@ -12,6 +12,7 @@
     "express": "^3.2.6",
     "express-validator": "^4.1.1",
     "fs": "0.0.1-security",
+    "heroku-ssl-redirect": "0.0.4",
     "json-stringify": "^1.0.0",
     "morgan": "^1.8.2",
     "restify": "^6.0.0",
