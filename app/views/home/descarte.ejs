@@ -133,25 +133,22 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <div class="table-responsive">
-                                <table class="table table-striped table-bordered table-hover" id="dataTables-execucoes">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Data</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                      <%for(var i=0; i<listas.EXECUCOES.length; i++) {%>
-                                      <tr>
-                                          <td><%= listas.EXECUCOES[i].EXECUCAO_ID %></td>
-                                          <td><%= listas.EXECUCOES[i].EXECUCAO_DATA %></td>
-                                      </tr>
-                                      <% } %>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- /.table-responsive -->
+                          <table class="table table-striped table-bordered table-hover" id="dataTables-execucoes">
+                              <thead>
+                                  <tr>
+                                      <th>#</th>
+                                      <th>Data</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                <%for(var i=0; i<listas.EXECUCOES.length; i++) {%>
+                                <tr>
+                                    <td><%= listas.EXECUCOES[i].EXECUCAO_ID %></td>
+                                    <td><%= listas.EXECUCOES[i].EXECUCAO_DATA %></td>
+                                </tr>
+                                <% } %>
+                              </tbody>
+                          </table>
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -165,27 +162,24 @@
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-                            <div class="table-responsive">
-                                <table class="table" id="dataTables-erros">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Data de Execução</th>
-                                            <th>Mensagem</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                      <%for(var i=0; i<listas.ERROS_EXECUCAO.length; i++) {%>
-                                      <tr>
-                                          <td><%= listas.ERROS_EXECUCAO[i].EXECUCOES_ID %></td>
-                                          <td><%= listas.ERROS_EXECUCAO[i].ERRO_EXECUCAO_DATA_ERRO %></td>
-                                          <td><%= listas.ERROS_EXECUCAO[i].ERRO_EXECUCAO_MSG %></td>
-                                      </tr>
-                                      <% } %>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <!-- /.table-responsive -->
+                            <table class="table table-striped table-bordered table-hover" id="dataTables-erros">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Data de Execução</th>
+                                        <th>Mensagem</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                  <%for(var i=0; i<listas.ERROS_EXECUCAO.length; i++) {%>
+                                  <tr>
+                                      <td><%= listas.ERROS_EXECUCAO[i].EXECUCOES_ID %></td>
+                                      <td><%= listas.ERROS_EXECUCAO[i].ERRO_EXECUCAO_DATA_ERRO %></td>
+                                      <td><%= listas.ERROS_EXECUCAO[i].ERRO_EXECUCAO_MSG %></td>
+                                  </tr>
+                                  <% } %>
+                                </tbody>
+                            </table>
                         </div>
                         <!-- /.panel-body -->
                     </div>
@@ -193,29 +187,6 @@
                 </div>
                 <!-- /.col-lg-6 -->
             </div>
-            <!-- /.row -->
-            <div class="row">
-                <div class="col-lg-6">
-
-                </div>
-                <!-- /.col-lg-6 -->
-                <div class="col-lg-6">
-
-                </div>
-                <!-- /.col-lg-6 -->
-            </div>
-            <!-- /.row -->
-            <div class="row">
-                <div class="col-lg-6">
-
-                </div>
-                <!-- /.col-lg-6 -->
-                <div class="col-lg-6">
-
-                </div>
-                <!-- /.col-lg-6 -->
-            </div>
-            <!-- /.row -->
         </div>
         <!-- /#page-wrapper -->
 
@@ -243,13 +214,49 @@
     <script>
     $(document).ready(function() {
         $('#dataTables-notificacoes').DataTable({
-            responsive: true
+            "responsive": true,
+            "language": {
+              "lengthMenu": "Mostrando _MENU_ registros por página",
+              "zeroRecords": "Nada Encontrado - desculpe",
+              "info": "Mostrando página _PAGE_ de _PAGES_",
+              "infoEmpty": "Nenhum Registro Encontrado",
+              "infoFiltered": "(filtrado de _MAX_ registros)",
+              "sSearch":        "Buscar:",
+              "paginate": {
+                "previous": "Anterior",
+                "next": "Próxima",
+              }
+            }
         });
         $('#dataTables-execucoes').DataTable({
-            responsive: true
+          "responsive": true,
+          "language": {
+            "lengthMenu": "Mostrando _MENU_ registros por página",
+            "zeroRecords": "Nada Encontrado - desculpe",
+            "info": "Mostrando página _PAGE_ de _PAGES_",
+            "infoEmpty": "Nenhum Registro Encontrado",
+            "infoFiltered": "(filtrado de _MAX_ registros)",
+            "sSearch":        "Buscar:",
+            "paginate": {
+              "previous": "Anterior",
+              "next": "Próxima",
+            }
+          }
         });
         $('#dataTables-erros').DataTable({
-            responsive: true
+          "responsive": true,
+          "language": {
+            "lengthMenu": "Mostrando _MENU_ registros por página",
+            "zeroRecords": "Nada Encontrado - desculpe",
+            "info": "Mostrando página _PAGE_ de _PAGES_",
+            "infoEmpty": "Nenhum Registro Encontrado",
+            "infoFiltered": "(filtrado de _MAX_ registros)",
+            "sSearch":        "Buscar:",
+            "paginate": {
+              "previous": "Anterior",
+              "next": "Próxima",
+            }
+          }
         });
     });
     </script>

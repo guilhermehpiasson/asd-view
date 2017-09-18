@@ -1,7 +1,6 @@
 module.exports = function(app){
 	app.get('/', function(req,res){
 		res.render("../app/views/home/index");
-		console.log('essou');
 	});
 	app.get('/descarte/solicitacoesefetuadas', function(req,res){
 
