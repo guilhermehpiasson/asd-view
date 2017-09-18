@@ -11,9 +11,12 @@
     "ejs": "*",
     "express": "^3.2.6",
     "express-validator": "^4.1.1",
+    "fs": "0.0.1-security",
     "json-stringify": "^1.0.0",
+    "morgan": "^1.8.2",
     "restify": "^6.0.0",
     "restify-clients": "^1.5.1",
-    "sitemap": "^1.13.0"
+    "sitemap": "^1.13.0",
+    "winston": "^2.3.1"
   }
 }
