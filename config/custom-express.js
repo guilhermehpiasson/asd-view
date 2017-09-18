@@ -6,6 +6,7 @@ var expressValidator = require('express-validator');
 var ejs = require('ejs');
 var morgan = require('morgan');
 var logger = require('../servicos/logger.js');
+var sslRedirect = require('heroku-ssl-redirect');
 
 module.exports = function(){
   var app = express();
@@ -21,12 +22,19 @@ module.exports = function(){
   app.set('view engine', 'ejs');
   app.set('port', process.env.PORT || 3004);
 
+
+  app.configure('production', function(){
+    app.use(sslRedirect());
+  });
+
+
+/*
   app.use((req, res, next) => {
     if (req.header["x-forwarded-proto"] !== 'https')
       res.redirect(`https://${req.header('host')}${req.url}`)
     else
       next()
-  })
+  })*/
 
   app.use(express.static(path.join(__dirname, '../public')));
 
