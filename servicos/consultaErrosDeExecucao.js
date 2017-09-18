@@ -3,7 +3,7 @@ var clients = require('restify-clients');
 
 function ErrosDeExecucaoClient(){
   this._cliente = clients.createJsonClient({
-    url:'http://localhost:3001'
+    url:'https://asd-descarte.herokuapp.com/'
   });
 }
 
