@@ -1,8 +1,8 @@
 /*
- * Arquivo: app.js
+ * Arquivo: asdView.js
  * Author: Guilherme Henrique Piasson
- * Description: Arquivo principal e responsável por executar a nossa aplicação.
- * Data: 02/09/2017
+ * Description: Arquivo principal e responsável por carregar as configuracoes do express, configuracoes de log e iniciar a aplicação.
+ * Data: 19/09/2017
  */
 
 var app = require('./config/custom-express')();

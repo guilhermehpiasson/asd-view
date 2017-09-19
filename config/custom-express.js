@@ -1,3 +1,10 @@
+/*
+ * Arquivo: custom-express.js
+ * Author: Guilherme Henrique Piasson
+ * Description: Arquivo que carrega o express.
+ *              Além disso o mesmo define porta, redirecionamento para HTTPS, entre outras configurações.
+ * Data: 19/09/2017
+ */
 var express = require('express');
 var consign = require('consign');
 var bodyParser = require('body-parser');
@@ -22,19 +29,9 @@ module.exports = function(){
   app.set('view engine', 'ejs');
   app.set('port', process.env.PORT || 3004);
 
-
   app.configure('production', function(){
     app.use(sslRedirect());
   });
-
-
-/*
-  app.use((req, res, next) => {
-    if (req.header["x-forwarded-proto"] !== 'https')
-      res.redirect(`https://${req.header('host')}${req.url}`)
-    else
-      next()
-  })*/
 
   app.use(express.static(path.join(__dirname, '../public')));
 

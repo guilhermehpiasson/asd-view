@@ -1,3 +1,9 @@
+/*
+ * Arquivo: logger.js
+ * Author: Guilherme Henrique Piasson
+ * Description: Arquivo com configurações a cerca da gestão de log baseadas no winston.
+ * Data: 19/09/2017
+ */
 var winston = require('winston');
 var fs = require('fs');
 
